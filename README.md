@@ -51,4 +51,4 @@
 
 
 ### Appedix.
-- [A. Pop API](https://github.com/hanback-lab/Testbed-II/blob/main/ETC/A.%20Pop%20API.md
+- [A. Pop API](https://github.com/hanback-lab/Testbed-II/blob/main/ETC/A.%20Pop%20API.md)
