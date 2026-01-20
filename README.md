@@ -52,3 +52,5 @@
 
 ### Appedix.
 - [A. Pop API](https://github.com/hanback-lab/Testbed-II/blob/main/ETC/A.%20Pop%20API.md)
+
+- [B. Remote Session](https://github.com/hanback-lab/Testbed-II/blob/main/ETC/B.%20Remote%20Session.md)

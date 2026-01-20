@@ -47,7 +47,7 @@ ssh soda@192.168.50.2
 remote_display <IP>
 ```
 
-<img src="res/command_run.png" style="width:40%">
+<img src="res/terminal_run.png" style="width:40%">
 <br><br>
 
 명령어를 입력할 시 HMI의 디스플레이에서 원격 접속 프로그램이 자동으로 실행되며, 사용자 계정 정보를 입력하는 화면이 출력됩니다. 'Username' 에선 사용자 PC의 계정 이름을, 'Password' 에서는 계정 비밀번호를 입력합니다.
