@@ -18,12 +18,13 @@ AIoT Testbed II의 HMI에서 사용자의 PC 화면을 표시하여 화면 공�
 
 `Win + x`를 눌러 표시되는 작업 표시줄 메뉴에서 '터미널' 을 실행합니다. 
 
-<img src="res/terminal_run.png" style="width:40%;">
+<img src="res/exec_terminal.png" style="width:80%;">
 <br><br>
 
 그 후, 표시되는 터미널 창에서 `ipconfig` 명령어를 입력하여 사용자 IP를 확인합니다. 출력 내용 중 Wi-Fi 항목에 기재된 Ipv4 주소를 확인합니다.  
 
-
+<img src="res/ipv4_addr.png" style="width:80%;">
+<br><br>
 
 ## SSH 접속
 
