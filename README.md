@@ -1,5 +1,5 @@
 # TestBed II 
-![]()
+![TestBed](Chapter1.%20TestBed%20II/res/testbed.png)
 
 ## Manual Index
 ### Chapter 1. TestBed
