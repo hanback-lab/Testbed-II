@@ -66,7 +66,7 @@ testbed.actuator 에 포함된 기능은 다음과 같습니다.
 전체 Fan 제어 클래스 
 - Fan.on(place=None) : Fan 켜기, place 에 장소 지정하면 해당 구역만 켜기 
     - place = 'ROOM' or 'KITCHEN' 
-- Fan.off(place=None) : Fan 끄기, place 에 장소 지정하면 해당 구역만 켜기 
+- Fan.off(place=None) : Fan 끄기, place 에 장소 지정하면 해당 구역만 끄기 
     - place = 'ROOM' or 'KITCHEN' 
 - Fan.state : Fan 의 제어 피드백, 제어가 없는 경우에는 None 
     - ex) {'ENTRANCE': {'ts': 1609467209, 'state': 'OFF'}, 'ROOM': {'ts': 1609467214, 'state': 'ON'}, 'KITCHEN': {'ts': 1609467208, 'state': 'OFF'}}
