@@ -61,6 +61,7 @@ testbed.actuator 에 포함된 기능은 다음과 같습니다.
 - Fan.off() : Fan 끄기
 - Fan.state : Fan 의 제어 피드백, 제어가 없는 경우에는 None 
     - ex) {'ts':1609460958, 'state':'OFF'}
+---
 
 ### Class FanGroup 
 전체 Fan 제어 클래스 
@@ -70,6 +71,7 @@ testbed.actuator 에 포함된 기능은 다음과 같습니다.
     - place = 'ROOM' or 'KITCHEN' 
 - Fan.state : Fan 의 제어 피드백, 제어가 없는 경우에는 None 
     - ex) {'ENTRANCE': {'ts': 1609467209, 'state': 'OFF'}, 'ROOM': {'ts': 1609467214, 'state': 'ON'}, 'KITCHEN': {'ts': 1609467208, 'state': 'OFF'}}
+---
 
 ### Class DoorLock 
 DoorLock 제어 클래스 
@@ -79,6 +81,7 @@ DoorLock 제어 클래스
 - DoorLock.close() : DoorLock 닫기
 - DoorLock.state : DoorLock 의 제어 피드백, 제어가 없는 경우에는 None 
     - ex) {'ts':1609461058, 'state':'OPEN'}
+---
 
 ### Class GasBreaker 
 GasBreaker 제어 클래스 
@@ -88,6 +91,7 @@ GasBreaker 제어 클래스
 - GasBreaker.close() : GasBreaker 닫기
 - GasBreaker.state : GasBreaker 의 제어 피드백, 제어가 없는 경우에는 None 
     - ex) {'ts':1609461059, 'state':'OPEN'}
+---
 
 ### Class Curtain 
 Curtain 제어 클래스 
@@ -98,8 +102,10 @@ Curtain 제어 클래스
 - Curtain.stop() : Curtain 제어 중지 
 - Curtain.state : Curtain 의 제어 피드백, 제어가 없는 경우에는 None 
     - ex) {'ts':1609462059, 'state':'OPENED'}
+---
 
 ## testbed.sensor
+---
 
 ### Class Pir 
 Pir 센서 클래스 
@@ -107,6 +113,7 @@ Pir 센서 클래스
 - Pir.NAME : 장치 명칭
 - Pir.read() : Pir 센서값 읽기
     - ex) {'ts': 1609478022, 'state': 0}
+---
 
 ### Class Dust 
 Dust 센서 클래스 
@@ -114,6 +121,7 @@ Dust 센서 클래스
 - Dust.NAME : 장치 명칭
 - Dust.read() : Dust 센서값 읽기, tsi 방식 
     - ex) {'ts': 1609478030, 'pm1_0': 12, 'pm2_5': 16, 'pm10': 18} 
+---
 
 ### Class Tphg 
 단일 TPHG(Temperature, Pressure, Humidity, Gas) 센서 클래스 
@@ -121,11 +129,13 @@ Dust 센서 클래스
 - Tphg.NAME : 장치 명칭
 - Tphg.read() : Tphg 센서값 읽기
     - ex) {'ts': 1609478223, 'temp': 19.57, 'humi': 12.64, 'press': 1010.86, 'gas': 12946}
+---
 
 ### Class TphgGroup 
 전체 TPHG(Temperature, Pressure, Humidity, Gas) 센서 클래스 
 - Tphg.read(places=None) : Tphg 센서값 읽기, places 에 장소 지정하면 해당 구역만 켜기 
     - ex) {'ENTRANCE': {'ts': 1609478310, 'temp': 19.53, 'humi': 12.59, 'press': 1010.78, 'gas': 12946}, 'ROOM': {'ts': 1609480560, 'temp': 21.33, 'humi': 9.57, 'press': 1011.55, 'gas': 12887}, 'KITCHEN': {'ts': 1609470309, 'temp': 21.68, 'humi': 9.83, 'press': 1011.29, 'gas': 12946}}
+---
 
 ### Class Light 
 단일 Light 센서 클래스 
@@ -133,11 +143,13 @@ Dust 센서 클래스
 - Light.NAME : 장치 명칭
 - Light.read() : Light 센서값 읽기
     - ex) {'ts': 1609475696, 'state': 264}
+---
 
 ### Class LightGroup 
 전체 Lihgt 센서 클래스 
 - Lihgt.read(places=None) : Light 센서값 읽기, places 에 장소 지정하면 해당 구역만 켜기 
     - ex) {'ENTRANCE': {'ts': 1609483788, 'state': 194}, 'ROOM': {'ts': 1609486038, 'state': 198}, 'KITCHEN': {'ts': 1609475785, 'state': 262}}
+---
 
 ### Class GasDetector 
 GasDetector 클래스 
@@ -145,6 +157,7 @@ GasDetector 클래스
 - GasDetector.NAME : 장치 명칭
 - GasDetector.read() : Gas 센서값 읽기
     - ex) {'ts': 1609476041, 'state': 0}
+---
 
 ### Class Impact 
 개별 Impact 클래스 
@@ -152,8 +165,10 @@ GasDetector 클래스
 - Impact.NAME : 장치 명칭
 - Impact.read() : Accel 센서값 읽기
     - ex) {'ts': 1609476426, 'state': 'none'}
+---
 
 ### Class ImpactGroup 
 전체 Impact 센서 클래스 
 - Impact.read(places=None) : Light 센서값 읽기, places 에 장소 지정하면 해당 구역만 켜기 
     - ex) {'ENTRANCE': None, 'ROOM': {'ts': 1609476471, 'state': 'none'}, 'KITCHEN': {'ts': 1609476471, 'state': 'detect'}}
+---
