@@ -12,7 +12,7 @@
 
 - [2-3. 비동기 제어](https://github.com/hanback-lab/Testbed-II/blob/main/Chapter2.%20Sensor%20%26%20Actuator/2-3.%20%EB%B9%84%EB%8F%99%EA%B8%B0%20%EC%A0%9C%EC%96%B4.md)
 
-### Chapter 3. HMI
+### Chapter 3. TestBed 제어 및 모니터링
 - [3-1. MQTT](https://github.com/hanback-lab/Testbed-II/blob/main/Chapter3.%20HMI/3-1.%20MQTT.md)
 
 - [3-2. TestBed MQTT Topic Structure](https://github.com/hanback-lab/Testbed-II/blob/main/Chapter3.%20HMI/3-2.%20TestBed%20MQTT%20Topic%20Structure.md)
