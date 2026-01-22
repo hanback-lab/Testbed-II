@@ -7,9 +7,32 @@ pip install pop-testbed
 ```
 
 ### 연결 설정 파일 생성 
-pop-testbed 활용에 앞서 연결 설정 파일을 생성합니다. 접속할 브로커의 주소, 장비 고유번호, 등의 정보를 "product" 파일로 저장하고 해당 정보를 읽어 활용합니다. 아래는 작성 예시입니다.
+pop-testbed 활용에 앞서 연결 설정 파일을 생성합니다. 접속할 브로커의 주소, 카메라 서버 주소, 장비 고유번호 등의 정보를 "product" 파일로 생성하여 **자신의 작업공간**에 저장하고 해당 정보를 읽어 활용합니다. 
 
-```conf
+#### EdgeAI product 파일 내용 확인
+product 파일 생성에 앞서 TestBed 에 작성되어 있는 내용을 확인해 보겠습니다. 
+
+TestBed와의 네트워크 연결은 `Chapter1. TestBed II -> 1. TestBed II 개요 -> TestBed 네트워크 연결` 부분을 참고합니다. 
+
+네트워크 연결을 먼저 진행한 후 아래 내용을 진행합니다. 
+
+1. 터미널 실행   
+    - `Win + x`를 눌러 표시되는 작업 표시줄 메뉴에서 '터미널' 을 실행합니다. 
+
+2. SSH 접속  
+    - 터미널 창에서 아래와 같이 명령어를 입력합니다.
+
+```sh 
+ssh soda@192.168.50.2
+```
+
+3. 다음 명령을 통한 명칭 확인   
+    - 다음 명령을 입력하여 출력되는 내용중 `INSITUTION_NAME` 을 확인하여 작성중인 product 파일에 적용합니다. 
+
+```sh 
+cat /etc/product 
+
+ex) 
 BROKER_DOMAIN=127.0.0.1
 CAMERA_DOMAIN=127.0.0.1
 DEVICE_NAME=TB
@@ -17,12 +40,30 @@ DEV_NUM=01
 INSITUTION_NAME=HBE
 ```
 
-- BROKER_DOMAIN : 접속할 브로커의 주소를 입력합니다. TestBed의 HMI IP를 입력합니다.
-- DEVICE_NAME : 장비의 이름으로 TestBed 은 'TB' 으로 기본 설정되어 있습니다. 
+출력되는 product 파일의 내용은 TestBed 내부에 저장된 내용이며 출력된 내용의 정보는 다음과 같습니다. 
+
+- BROKER_DOMAIN : 접속할 브로커의 주소 입니다. 
+    - TestBed 의 EdgeAI 는 자체 설치된 브로커를 활용합니다. 따라서 IP 주소가 '127.0.0.1' 로 설정되어 있습니다. 
+    - **외부에서 접속하는경우에는 EdgeAI 의 IP인 '192.168.50.2' 를 입력합니다.**
+- CAMERA_DOMAIN : TestBed 의 Camera 서버 주소 입니다. 
+    - **외부에서 접속하는경우에는 EdgeAI 의 IP인 '192.168.50.2' 를 입력합니다.**
+- DEVICE_NAME : 장비의 이름으로 TestBed 은 'TB' 으로 설정되어 있습니다. 
 - DEV_NUM : 장치의 고유 번호로 여러개의 장비가 존재하는 경우에는 이 번호를 중복되지 않게 설정해야 합니다. 
 - INSITUTION_NAME : 학교 또는 기관의 명칭을 고유 키워드로 활용합니다. 
 
-product 파일은 pop-testbed 을 활용하여 작성된 파이썬 프로그램을 실행하는 위치에 존재해야합니다. 
+이 정보를 기반으로 product 파일을 **자신의 PC의 작업공간**에 파일을 생성합니다. 
+
+파일생성에 앞서 작업공간을 지정합니다. VSCode 에서는 `File -> Open Folder` 선택 후 원하는 폴더를 지정합니다. 작업공간을 지정했다면 다음과 같이 **PC 에서 접속하기위한 product 파일** 을 작성합니다. 
+
+```conf
+BROKER_DOMAIN=192.168.50.2
+CAMERA_DOMAIN=192.168.50.2
+DEVICE_NAME=TB
+DEV_NUM=01
+INSITUTION_NAME=HBE
+```
+
+product 파일 생성 후 작업공간에 다음 그림과 같이 파일이 존재하는것을 확인 후 프로그램 실습을 진행합니다. 각각의 명칭과 정보를 정확하게 기입해야 이후 제어 프로그램 실행하는 과정에서 정상적인 제어를 진행할 수 있습니다.
 
 ## testbed.actuator 
 TestBed 의 액츄에이터를 제어하는 API가 포함되어 있습니다. 기본적인 활용은 다음과 같습니다. 

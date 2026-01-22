@@ -1,6 +1,6 @@
 # Remote Session
 
-AIoT Testbed II의 HMI에서 사용자의 PC 화면을 표시하여 화면 공유 및 원격 제어를 실시할 수 있습니다. 본 챕터는 Windows 11 PC를 기반으로 작성되었습니다.
+AIoT Testbed II의 EdgeAI에서 사용자의 PC 화면을 표시하여 화면 공유 및 원격 제어를 실시할 수 있습니다. 본 챕터는 Windows 11 PC를 기반으로 작성되었습니다.
 
 모든 작업은 Testbed II에 부착된 공유기에 사용자 PC를 연결한 후 작업을 진행합니다.
 
@@ -50,7 +50,7 @@ remote_display <IP>
 <img src="res/terminal_run.png" style="width:40%">
 <br><br>
 
-명령어를 입력할 시 HMI의 디스플레이에서 원격 접속 프로그램이 자동으로 실행되며, 사용자 계정 정보를 입력하는 화면이 출력됩니다. 'Username' 에선 사용자 PC의 계정 이름을, 'Password' 에서는 계정 비밀번호를 입력합니다.
+명령어를 입력할 시 EdgeAI의 디스플레이에서 원격 접속 프로그램이 자동으로 실행되며, 사용자 계정 정보를 입력하는 화면이 출력됩니다. 'Username' 에선 사용자 PC의 계정 이름을, 'Password' 에서는 계정 비밀번호를 입력합니다.
 
 <img src="res/remote_try_connect.png" style="width:80%">
 <br><br>
